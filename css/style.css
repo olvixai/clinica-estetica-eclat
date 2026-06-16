@@ -584,6 +584,11 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .hero__orbs, .hero__particles {
+    display: none !important;
+  }
+}
 
 /* ── HERO CONTENT ── */
 .hero__content {

@@ -609,10 +609,12 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-decoration: none;
     }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-      color: #FFF;
+    @media (hover: hover) {
+      .whatsapp-float:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        color: #FFF;
+      }
     }
     .whatsapp-float svg {
       width: 32px;
