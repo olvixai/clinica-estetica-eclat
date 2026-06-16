@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Estética Premium — Medicina Estética Avanzada</title>
+  <meta name="description"
+    content="Descubre los mejores tratamientos de medicina estética sin cirugía. Ácido hialurónico, neuromoduladores, rejuvenecimiento facial y corporal en nuestra clínica premium.">
+  <link rel="stylesheet" href="css/style.css?v=final4">
+  <style>
+    /* Ocultar el botón automático del widget de CitaYa para que no moleste al chat */
+    #citaya-widget + button, 
+    button[style*="fixed"][style*="z-index: 9998"],
+    button:has(svg) + div + button { 
+      display: none !important; 
+    }
+  </style>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo">Éclat<span>.</span></a>
+      <nav class="header__nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#resultados">Casos Reales</a>
+        <a href="#equipo">Equipo Médico</a>
+        <a href="#instalaciones">Instalaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button onclick="abrirCitaya()" class="btn btn--primary header__cta">Pedir Cita</button>
+      <button class="header__burger" id="burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#inicio">Inicio</a>
+    <a href="#tratamientos">Tratamientos</a>
+    <a href="#resultados">Casos Reales</a>
+    <a href="#equipo">Equipo Médico</a>
+    <a href="#instalaciones">Instalaciones</a>
+    <a href="#contacto">Contacto</a>
+    <button onclick="abrirCitaya()" class="btn btn--primary" style="margin-top:1rem;">Pedir Cita</button>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <img src="img/hero-bg.png" alt="Clínica Éclat — Medicina Estética Premium">
+    </div>
+    <div class="hero__overlay"></div>
+    <!-- Large Aurora Orbs -->
+    <div class="hero__orbs">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__orb hero__orb--4"></div>
+    </div>
+    <!-- Mouse-tracking spotlight -->
+    <div class="hero__spotlight" id="heroSpotlight"></div>
+    <!-- Floating particles (JS-generated) -->
+    <div class="hero__particles" id="heroParticles"></div>
+    <!-- Decorative corner frames -->
+    <!-- Content -->
+    <div class="hero__content">
+      <span class="hero__label hero-anim hero-anim--1">
+        <span class="hero__label-line"></span>
+        Medicina Estética Avanzada
+        <span class="hero__label-line"></span>
+      </span>
+      <h1 class="hero__title hero-anim hero-anim--2">Tu Belleza, <em class="hero__shimmer">Nuestra Ciencia</em></h1>
+      <p class="hero__subtitle hero-anim hero-anim--3">Especialistas en tratamientos estéticos sin cirugía. Resultados
+        naturales con la tecnología más avanzada.</p>
+      <div class="hero__buttons hero-anim hero-anim--4">
+        <a href="#tratamientos" class="btn btn--primary btn--glow">Ver Tratamientos</a>
+        <a href="#contacto" class="btn btn--outline-white">Reserva tu Consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BENEFITS ======== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">¿Por Qué Elegirnos?</span>
+        <h2 class="section__title reveal">Excelencia en Cada <em>Detalle</em></h2>
+        <div class="divider reveal"></div>
+      </div>
+      <div class="benefits">
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-card__image-wrapper">
+            <img src="img/illust_ai.png" alt="Diagnóstico IA" class="benefit-card__image">
+          </div>
+          <div class="benefit-card__content">
+            <h3 class="benefit-card__title">Diagnóstico con IA</h3>
+            <p class="benefit-card__desc">Análisis avanzado de piel con tecnología de inteligencia artificial para un
+              plan de tratamiento 100% personalizado.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-card__image-wrapper">
+            <img src="img/illust_tech.png" alt="Tecnología Vanguardia" class="benefit-card__image">
+          </div>
+          <div class="benefit-card__content">
+            <h3 class="benefit-card__title">Tecnología de Vanguardia</h3>
+            <p class="benefit-card__desc">Equipamiento de última generación con los láseres, dispositivos IPL y sistemas
+              de radiofrecuencia más avanzados del mercado.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-card__image-wrapper">
+            <img src="img/illust_team.png" alt="Equipo Médico Experto" class="benefit-card__image">
+          </div>
+          <div class="benefit-card__content">
+            <h3 class="benefit-card__title">Equipo Médico Experto</h3>
+            <p class="benefit-card__desc">Médicos especialistas con más de 15 años de experiencia en medicina estética
+              facial y corporal.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-4">
+          <div class="benefit-card__image-wrapper">
+            <img src="img/illust_results.png" alt="Resultados Naturales" class="benefit-card__image">
+          </div>
+          <div class="benefit-card__content">
+            <h3 class="benefit-card__title">Resultados Naturales</h3>
+            <p class="benefit-card__desc">Nuestra filosofía: realzar tu belleza natural sin artificialidad. Resultados
+              que tú sientes pero otros solo admiran.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TREATMENTS ======== -->
+  <section class="section section--alt" id="tratamientos">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">Nuestros Tratamientos</span>
+        <h2 class="section__title reveal">Medicina Estética <em>Sin Cirugía</em></h2>
+        <p class="section__subtitle reveal">Descubre nuestra amplia carta de tratamientos diseñados para revelar tu
+          mejor versión, con resultados visibles desde la primera sesión.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="treatments__tabs reveal" id="treatmentTabs">
+        <button class="treatments__tab" data-category="facial">Faciales</button>
+        <button class="treatments__tab" data-category="corporal">Corporales</button>
+        <button class="treatments__tab" data-category="capilar">Capilares</button>
+        <button class="treatments__tab" data-category="depilacion">Depilación</button>
+        <button class="treatments__tab" data-category="bienestar">Bienestar</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="treatments__grid" id="treatmentsGrid">
+        <!-- Cards inserted by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BEFORE / AFTER ======== -->
+  <section class="section" id="resultados">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">Resultados Reales</span>
+        <h2 class="section__title reveal">Casos Reales: <em>Antes y Después</em></h2>
+        <p class="section__subtitle reveal">Descubre las transformaciones reales de nuestros pacientes. Arrastra el
+          control deslizante para ver los resultados.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="cases__filters reveal" id="caseFilters">
+        <button class="treatments__tab" data-filter="facial">Faciales</button>
+        <button class="treatments__tab" data-filter="corporal">Corporales</button>
+        <button class="treatments__tab" data-filter="capilar">Capilares</button>
+        <button class="treatments__tab" data-filter="depilacion">Depilación</button>
+        <button class="treatments__tab" data-filter="bienestar">Bienestar</button>
+      </div>
+
+      <!-- Cases Grid -->
+      <div class="cases__grid" id="casesGrid">
+        <!-- Cases inserted by JS -->
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ======== ADMIN: UPLOAD PANEL (Hidden by default, toggle with ?admin) ======== -->
+  <section class="section section--alt" id="adminUpload" style="display:none;">
+    <div class="container container--narrow">
+      <div class="text-center">
+        <span class="section__label">Panel de Administración</span>
+        <h2 class="section__title">Subir Nuevo <em>Caso Real</em></h2>
+        <p class="section__subtitle">Sube las fotos o vídeos del antes y después de tus pacientes.</p>
+      </div>
+      <form id="uploadForm" class="upload-form">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);margin-bottom:var(--space-lg);">
+          <div>
+            <label class="section__label" style="margin-bottom:var(--space-sm);">Foto / Vídeo — Antes</label>
+            <div class="upload-zone" id="dropBefore">
+              <div class="upload-zone__icon">📷</div>
+              <p class="upload-zone__text">Arrastra aquí o <strong>haz clic</strong> para seleccionar</p>
+              <input type="file" id="fileBefore" accept="image/*,video/*" style="display:none;">
+            </div>
+            <div id="previewBefore" style="margin-top:var(--space-sm);"></div>
+          </div>
+          <div>
+            <label class="section__label" style="margin-bottom:var(--space-sm);">Foto / Vídeo — Después</label>
+            <div class="upload-zone" id="dropAfter">
+              <div class="upload-zone__icon">📷</div>
+              <p class="upload-zone__text">Arrastra aquí o <strong>haz clic</strong> para seleccionar</p>
+              <input type="file" id="fileAfter" accept="image/*,video/*" style="display:none;">
+            </div>
+            <div id="previewAfter" style="margin-top:var(--space-sm);"></div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);margin-bottom:var(--space-lg);">
+          <div>
+            <label class="section__label" style="margin-bottom:var(--space-sm);">Nombre del Paciente</label>
+            <input type="text" id="caseName" placeholder="Ej: María G."
+              style="width:100%;padding:0.75rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-sans);font-size:0.9rem;outline:none;background:var(--color-surface);">
+          </div>
+          <div>
+            <label class="section__label" style="margin-bottom:var(--space-sm);">Tratamiento Realizado</label>
+            <select id="caseTreatment"
+              style="width:100%;padding:0.75rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-sans);font-size:0.9rem;outline:none;background:var(--color-surface);">
+              <option value="facial">Facial</option>
+              <option value="corporal">Corporal</option>
+              <option value="capilar">Capilar</option>
+              <option value="depilacion">Depilación</option>
+              <option value="bienestar">Bienestar</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom:var(--space-lg);">
+          <label class="section__label" style="margin-bottom:var(--space-sm);">Descripción del Caso</label>
+          <textarea id="caseDesc" rows="3"
+            placeholder="Describe brevemente el tratamiento aplicado y los resultados obtenidos..."
+            style="width:100%;padding:0.75rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-sans);font-size:0.9rem;outline:none;resize:vertical;background:var(--color-surface);"></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn--primary">Publicar Caso Real</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======== TEAM ======== -->
+  <section class="section section--alt" id="equipo">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">Nuestro Equipo</span>
+        <h2 class="section__title reveal">Profesionales de <em>Excelencia</em></h2>
+        <p class="section__subtitle reveal">Un equipo médico multidisciplinar dedicado a tu bienestar y belleza con los
+          más altos estándares de formación y experiencia.</p>
+      </div>
+      <div class="team__grid">
+        <div class="team-card reveal reveal-delay-1">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+            alt="Dra. Elena Martínez" class="team-card__photo">
+          <h3 class="team-card__name">Dra. Elena Martínez</h3>
+          <p class="team-card__role">Directora Médica — Nº Col. 28/12345</p>
+          <p class="team-card__bio">Especialista en medicina estética facial con más de 18 años de experiencia. Experta
+            en técnicas de rejuvenecimiento y armonización facial.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+            alt="Dr. Carlos Ruiz" class="team-card__photo">
+          <h3 class="team-card__name">Dr. Carlos Ruiz</h3>
+          <p class="team-card__role">Especialista Corporal — Nº Col. 28/67890</p>
+          <p class="team-card__bio">Referente en tratamientos corporales no invasivos. Pionero en protocolos combinados
+            de criolipólisis y radiofrecuencia.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <img src="img/dra_isabel_navarro.png" alt="Dra. Isabel Navarro" class="team-card__photo">
+          <h3 class="team-card__name">Dra. Isabel Navarro</h3>
+          <p class="team-card__role">Medicina Antiaging — Nº Col. 08/54321</p>
+          <p class="team-card__bio">Especializada en protocolos de longevidad y bienestar integral. Formada en las
+            clínicas más prestigiosas de Suiza y Francia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FACILITIES ======== -->
+  <section class="section" id="instalaciones">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">Nuestro Espacio</span>
+        <h2 class="section__title reveal">Un Entorno Diseñado para tu <em>Bienestar</em></h2>
+        <div class="divider reveal"></div>
+      </div>
+      <div class="facilities__grid reveal">
+        <div class="facilities__item">
+          <img src="img/facility-main.png" alt="Recepción de la clínica Éclat">
+          <div class="facilities__caption">Recepción Principal</div>
+        </div>
+        <div class="facilities__item">
+          <img src="img/facility-treatment.png" alt="Sala de tratamientos">
+          <div class="facilities__caption">Sala de Tratamientos</div>
+        </div>
+        <div class="facilities__item">
+          <img src="img/facility-tech.png" alt="Tecnología avanzada">
+          <div class="facilities__caption">Tecnología de Última Generación</div>
+        </div>
+        <div class="facilities__item">
+          <img src="img/facility-lounge.png" alt="Zona de relajación">
+          <div class="facilities__caption">Zona de Relax</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="section section--alt" id="testimonios">
+    <div class="container container--narrow">
+      <div class="text-center">
+        <span class="section__label reveal">Testimonios</span>
+        <h2 class="section__title reveal">Lo Que Dicen Nuestros <em>Pacientes</em></h2>
+        <div class="divider reveal"></div>
+      </div>
+      <div class="testimonials__carousel reveal" id="testimonialCarousel">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-card__quote">"Un trato exquisito desde la primera consulta. Los resultados de mi
+            rejuvenecimiento facial con ácido hialurónico superaron todas mis expectativas. Me veo 10 años más joven de
+            forma completamente natural."</p>
+          <p class="testimonial-card__author">María García — <span>Tratamiento Facial</span></p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-card__quote">"Después de probar varias clínicas, encontré en Éclat la profesionalidad y
+            los resultados que buscaba. La Dra. Martínez es increíble con el bótox, resultado muy natural."</p>
+          <p class="testimonial-card__author">Laura Fernández — <span>Neuromoduladores</span></p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-card__quote">"El protocolo de tratamiento corporal combinado ha sido una revolución. En
+            6 sesiones he notado una diferencia impresionante. El equipo es maravilloso y las instalaciones preciosas."
+          </p>
+          <p class="testimonial-card__author">Ana Rodríguez — <span>Tratamiento Corporal</span></p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★ ★ ★ ★ ★</div>
+          <p class="testimonial-card__quote">"Desde que empecé mi tratamiento de mesoterapia capilar he notado una
+            mejora enorme. El Dr. Ruiz me explicó todo con detalle y el seguimiento es impecable."</p>
+          <p class="testimonial-card__author">Javier López — <span>Tratamiento Capilar</span></p>
+        </div>
+      </div>
+      <div class="testimonials__dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT FORM ======== -->
+  <section class="section section--dark" id="contacto">
+    <div class="container">
+      <div class="text-center">
+        <span class="section__label reveal">Contacto</span>
+        <h2 class="section__title reveal" style="color:#fff;">Reserva tu <em
+            style="color:var(--color-gold-light);">Consulta Gratuita</em></h2>
+        <p class="section__subtitle reveal" style="color:rgba(255,255,255,0.5);">Déjanos tus datos y nuestro equipo
+          médico se pondrá en contacto contigo en menos de 24 horas.</p>
+        <span id="contactFormAnchor" style="display:block;height:0;overflow:hidden;"></span>
+      </div>
+      <div class="contact-form-wrapper reveal">
+        <!-- Info Panel -->
+        <div class="contact-info-panel">
+          <div class="contact-info-panel__header">
+            <div class="contact-info-panel__logo">Éclat<span>.</span></div>
+            <p>Tu clínica de medicina estética de confianza en Fuerteventura</p>
+          </div>
+          <div class="contact-info-panel__items">
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📍</div>
+              <div>
+                <strong>Dirección</strong>
+                <p>Av. Ntra. Sra. del Carmen, 34, Corralejo, Fuerteventura</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📞</div>
+              <div>
+                <strong>Teléfono</strong>
+                <p><a href="tel:+34928000000">+34 928 00 00 00</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">💬</div>
+              <div>
+                <strong>WhatsApp</strong>
+                <p><a href="https://wa.me/34621049908" target="_blank">+34 621 049 908</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:info@eclat.es">info@eclat.es</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">🕐</div>
+              <div>
+                <strong>Horario</strong>
+                <p>L-V: 9:00–20:00 | S: 10:00–14:00</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-panel__cta">
+          </div>
+        </div>
+        <!-- Form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="contact-form__row">
+            <div class="contact-form__group">
+              <label for="contactName">Nombre completo *</label>
+              <input type="text" id="contactName" placeholder="Tu nombre" required>
+            </div>
+            <div class="contact-form__group">
+              <label for="contactPhone">Teléfono *</label>
+              <input type="tel" id="contactPhone" placeholder="+34 621 049 908" required>
+            </div>
+          </div>
+          <div class="contact-form__group">
+            <label for="contactEmail">Email *</label>
+            <input type="email" id="contactEmail" placeholder="tu@email.com" required>
+          </div>
+          <div class="contact-form__group">
+            <label for="contactInterest">¿En qué tratamiento estás interesado/a?</label>
+            <select id="contactInterest">
+              <option value="" disabled selected>Selecciona un tratamiento...</option>
+              <optgroup label="Faciales">
+                <option value="acido-hialuronico">Ácido Hialurónico</option>
+                <option value="botox">Neuromoduladores (Bótox)</option>
+                <option value="hilos-tensores">Hilos Tensores</option>
+                <option value="mesoterapia-facial">Mesoterapia Facial</option>
+                <option value="peeling">Peeling Químico</option>
+                <option value="ipl-laser">Rejuvenecimiento IPL / Láser</option>
+                <option value="indiba-facial">Indiba Facial</option>
+                <option value="limpieza-facial">Limpieza Facial Profunda</option>
+                <option value="rinomodelacion">Rinomodelación</option>
+                <option value="prp-facial">Plasma Rico en Plaquetas</option>
+              </optgroup>
+              <optgroup label="Corporales">
+                <option value="criolipólisis">Criolipólisis</option>
+                <option value="cavitacion">Cavitación Médica</option>
+                <option value="mesoterapia-corporal">Mesoterapia Corporal</option>
+                <option value="varices">Eliminación de Varices</option>
+                <option value="anticelulitico">Tratamiento Anticelulítico</option>
+                <option value="reafirmante">Tratamiento Reafirmante</option>
+              </optgroup>
+              <optgroup label="Capilares">
+                <option value="mesoterapia-capilar">Mesoterapia Capilar</option>
+                <option value="prp-capilar">PRP Capilar</option>
+                <option value="laser-capilar">Láser Capilar</option>
+              </optgroup>
+              <optgroup label="Depilación">
+                <option value="depilacion-laser">Depilación Láser Médica</option>
+                <option value="depilacion-facial">Láser Facial</option>
+              </optgroup>
+              <optgroup label="Protocolos">
+                <option value="antiaging">Protocolo Antiaging Integral</option>
+                <option value="pre-boda">Protocolo Pre-Boda</option>
+                <option value="postparto">Protocolo Postparto</option>
+                <option value="longevidad">Protocolo Longevidad</option>
+              </optgroup>
+              <optgroup label="Otras Consultas">
+                <option value="consulta-general">Consulta General / No lo sé</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="contact-form__group">
+            <label for="contactMessage">Mensaje o comentario</label>
+            <textarea id="contactMessage" rows="4"
+              placeholder="Cuéntanos qué necesitas, tus dudas o cualquier información relevante..."></textarea>
+          </div>
+          <div class="contact-form__group" style="flex-direction:row;align-items:flex-start;gap:12px;padding:4px 0;">
+            <input type="checkbox" id="contactPrivacy" required
+              style="width:20px;height:20px;flex-shrink:0;margin-top:2px;accent-color:var(--color-gold);cursor:pointer;">
+            <label for="contactPrivacy"
+              style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;">
+              Acepto la <a href="privacidad.html" style="color:var(--color-gold);">política de privacidad</a> y el
+              tratamiento de mis datos. *
+            </label>
+          </div>
+          <div id="formError" class="form-error"></div>
+          <div id="formSuccess" class="form-success">
+            <div class="form-success__icon">✨</div>
+            <h4 class="form-success__title">Solicitud Recibida</h4>
+            <p class="form-success__message">Gracias por confiar en Éclat. Nuestro equipo de especialistas está
+              revisando su caso y nos pondremos en contacto con usted a la mayor brevedad posible.</p>
+          </div>
+          <button type="submit" class="btn btn--primary btn--glow"
+            style="width:100%;justify-content:center;padding:1rem 2rem;" id="submitConsultaBtn">Solicitar Consulta
+            Gratuita</button>
+          <p class="contact-form__disclaimer">🔒 Tus datos están protegidos. No compartimos tu información con terceros.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Éclat<span>.</span></div>
+          <p class="footer__desc">Medicina Estética Avanzada. Más de 15 años dedicados a realzar tu belleza natural con
+            la tecnología más innovadora y un equipo médico de excelencia.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok">🎵</a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">👤</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4>Tratamientos</h4>
+          <div class="footer__links">
+            <a href="#tratamientos" class="footer__treatment-link" data-tab="facial">Faciales</a>
+            <a href="#tratamientos" class="footer__treatment-link" data-tab="corporal">Corporales</a>
+            <a href="#tratamientos" class="footer__treatment-link" data-tab="capilar">Capilares</a>
+            <a href="#tratamientos" class="footer__treatment-link" data-tab="depilacion">Depilación Láser</a>
+            <a href="#tratamientos" class="footer__treatment-link" data-tab="bienestar">Bienestar</a>
+          </div>
+        </div>
+        <div>
+          <h4>Clínica</h4>
+          <div class="footer__links">
+            <a href="#equipo">Equipo Médico</a>
+            <a href="#instalaciones">Instalaciones</a>
+            <a href="#resultados">Casos Reales</a>
+            <a href="#testimonios">Opiniones</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Éclat — Medicina Estética Premium. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="privacidad.html">Política de Privacidad</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="aviso-legal.html">Aviso Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== TREATMENT MODAL ======== -->
+  <div class="modal-overlay" id="treatmentModal">
+    <div class="modal">
+      <button class="modal__close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ======== COOKIE BANNER ======== -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner__content">
+      <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en
+        base a un perfil elaborado a partir de tus hábitos de navegación.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--primary btn--small" id="acceptCookies">Aceptar</button>
+      <button class="btn btn--outline btn--small" id="rejectCookies">Rechazar</button>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=final5"></script>
+
+  <!-- ======== WHATSAPP WIDGET ======== -->
+  <a href="https://wa.me/34644119402" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 9999;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      color: #FFF;
+    }
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+
+  <!-- CitaYa Booking Widget -->
+  <!-- CitaYa Booking Widget -->
+  <div id="citaya-widget" data-slug="clinica-estetica-eclat" data-mode="floating"></div>
+  <script src="https://citaya-dashboard.vercel.app/embed.js"></script>
+
+  <script>
+    function abrirCitaya() {
+      // Intentar abrir el widget de CitaYa buscando su botón (aunque esté oculto por CSS)
+      const botones = Array.from(document.querySelectorAll('button'));
+      const widgetBtn = botones.find(b => 
+        b.innerText.includes('Reservar cita') || 
+        (b.style.position === 'fixed' && b.style.zIndex === '9998')
+      );
+
+      if (widgetBtn) {
+        widgetBtn.click();
+      } else if (window.Citaya && typeof window.Citaya.open === 'function') {
+        // Segundo intento: usar la API si está disponible
+        window.Citaya.open();
+      } else {
+        // Fallback final: ir al formulario si nada funciona
+        const contactSection = document.getElementById('contacto');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+    function cerrarCitaya() {
+      if (window.Citaya && typeof window.Citaya.close === 'function') {
+        window.Citaya.close();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
