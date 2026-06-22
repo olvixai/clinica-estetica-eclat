@@ -7,39 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── DATA ─────────────────────────────────────
   const TREATMENTS = [
     // FACIALES
-    { id: 1, category: 'facial', title: 'Ácido Hialurónico', badge: 'Popular', desc: 'Rellenos dérmicos para labios, pómulos, ojeras, surcos nasogenianos y marcación mandibular. Resultados inmediatos y naturales.', details: 'El ácido hialurónico es una sustancia biocompatible que se inyecta para restaurar volumen, hidratar la piel en profundidad y suavizar arrugas. Resultados visibles desde la primera sesión con una duración de 8 a 18 meses según la zona tratada.<br><br><strong>Zonas:</strong> Labios, Pómulos, Ojeras, Surcos, Mandíbula, Mentón<br><strong>Duración:</strong> 30-45 min<br><strong>Recuperación:</strong> Inmediata', img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop' },
-    { id: 2, category: 'facial', title: 'Neuromoduladores (Bótox)', badge: '', desc: 'Tratamiento de frente, entrecejo y patas de gallo para suavizar líneas de expresión sin perder naturalidad.', details: 'Los neuromoduladores relajan temporalmente los músculos que causan arrugas dinámicas. Técnica precisa con resultados naturales que duran 4-6 meses.<br><br><strong>Zonas:</strong> Frente, Entrecejo, Patas de gallo, Bunny lines<br><strong>Duración:</strong> 15-20 min<br><strong>Recuperación:</strong> Inmediata', img: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop' },
-    { id: 3, category: 'facial', title: 'Hilos Tensores', badge: 'Premium', desc: 'Lifting sin cirugía con hilos de PDO y PLLA para redefinir el óvalo facial y tensar la piel con efecto inmediato.', details: 'Técnica mínimamente invasiva que utiliza hilos reabsorbibles para elevar y redefinir los tejidos faciales. Estimula la producción de colágeno propio.<br><br><strong>Tipos:</strong> PDO, PLLA, PCL<br><strong>Duración:</strong> 45-60 min<br><strong>Resultados:</strong> 12-18 meses', img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop' },
-    { id: 4, category: 'facial', title: 'Mesoterapia Facial', badge: '', desc: 'Cóctel vitamínico inyectable con vitaminas, minerales y ácido hialurónico para una piel luminosa y revitalizada.', details: 'Microinyecciones de sustancias nutritivas directamente en la piel para mejorar su textura, luminosidad e hidratación profunda.<br><br><strong>Beneficios:</strong> Luminosidad, Hidratación, Anti-oxidante<br><strong>Sesiones:</strong> 4-6 sessiones recomendadas<br><strong>Duración:</strong> 20-30 min', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop' },
-    { id: 5, category: 'facial', title: 'Peeling Químico', badge: '', desc: 'Exfoliación profunda controlada para renovar la piel, eliminar manchas, cicatrices de acné y mejorar la textura cutánea.', details: 'Aplicación de ácidos médicos para promover la renovación celular. Diferentes profundidades según la necesidad del paciente.<br><br><strong>Tipos:</strong> Superficial, Medio, Profundo<br><strong>Indicaciones:</strong> Manchas, Acné, Textura, Arrugas finas<br><strong>Recuperación:</strong> 2-7 días', img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop' },
-    { id: 6, category: 'facial', title: 'Rejuvenecimiento IPL / Láser', badge: 'Tecnología', desc: 'Fotorejuvenecimiento mediante luz pulsada intensa o láser para tratar manchas solares, rojeces y poros dilatados.', details: 'La luz pulsada intensa y los láseres fraccionados estimulan la producción de colágeno y elastina, mejorando el tono y la textura de la piel.<br><br><strong>Indicaciones:</strong> Manchas, Rosácea, Poros, Textura<br><strong>Sesiones:</strong> 3-5 sesiones<br><strong>Duración:</strong> 30-45 min', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop' },
-    { id: 7, category: 'facial', title: 'Indiba Facial', badge: '', desc: 'Radiofrecuencia monopolar profunda para activar la producción de colágeno, mejorar la firmeza y reducir la flacidez.', details: 'Tecnología patentada de radiofrecuencia a 448 kHz que genera un efecto biológico profundo en los tejidos.<br><br><strong>Beneficios:</strong> Firmeza, Contorno, Luminosidad<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Duración:</strong> 45-60 min', img: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&h=400&fit=crop' },
-    { id: 8, category: 'facial', title: 'Limpieza Facial Profunda', badge: '', desc: 'Higiene médica avanzada con extracción, oxigenación, hidratación y máscara LED para una piel impecable.', details: 'Protocolo completo que incluye limpieza enzimática, vaporización, extracción profesional, alta frecuencia, sérum personalizado y máscara LED.<br><br><strong>Indicaciones:</strong> Todos los tipos de piel<br><strong>Duración:</strong> 60-90 min<br><strong>Frecuencia:</strong> Mensual', img: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=400&fit=crop' },
-    { id: 9, category: 'facial', title: 'Rinomodelación', badge: 'Sin Cirugía', desc: 'Remodelación nasal sin bisturí mediante inyecciones de ácido hialurónico para corregir imperfecciones.', details: 'Corrección de dorso, punta y asimetrías nasales sin necesidad de intervención quirúrgica, con resultados inmediatos y reversibles.<br><br><strong>Duración:</strong> 15-30 min<br><strong>Resultados:</strong> 12-18 meses<br><strong>Recuperación:</strong> Inmediata', img: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&h=400&fit=crop' },
-    { id: 10, category: 'facial', title: 'Plasma Rico en Plaquetas (Facial)', badge: 'Bio', desc: 'Tu propio plasma concentrado para regenerar la piel, mejorar la textura, la luminosidad y estimular el colágeno.', details: 'Tratamiento biológico regenerativo que utiliza las plaquetas de tu propia sangre para activar los mecanismos de reparación celular.<br><br><strong>Beneficios:</strong> Regeneración, Luminosidad, Anti-aging<br><strong>Sesiones:</strong> 3-4 sesiones anuales<br><strong>Seguridad:</strong> Biocompatible al 100%', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop' },
+    { id: 1, category: 'facial', title: 'Ácido Hialurónico', badge: 'Popular', desc: 'Rellenos dérmicos para labios, pómulos, ojeras, surcos nasogenianos y marcación mandibular. Resultados inmediatos y naturales.', details: 'El ácido hialurónico es una sustancia biocompatible que se inyecta para restaurar volumen, hidratar la piel en profundidad y suavizar arrugas. Resultados visibles desde la primera sesión con una duración de 8 a 18 meses según la zona tratada.<br><br><strong>Zonas:</strong> Labios, Pómulos, Ojeras, Surcos, Mandíbula, Mentón<br><strong>Duración:</strong> 30-45 min<br><strong>Recuperación:</strong> Inmediata', img: 'img/facial_hialuronico.png' },
+    { id: 2, category: 'facial', title: 'Neuromoduladores (Bótox)', badge: '', desc: 'Tratamiento de frente, entrecejo y patas de gallo para suavizar líneas de expresión sin perder naturalidad.', details: 'Los neuromoduladores relajan temporalmente los músculos que causan arrugas dinámicas. Técnica precisa con resultados naturales que duran 4-6 meses.<br><br><strong>Zonas:</strong> Frente, Entrecejo, Patas de gallo, Bunny lines<br><strong>Duración:</strong> 15-20 min<br><strong>Recuperación:</strong> Inmediata', img: 'img/facial_botox.png' },
+    { id: 3, category: 'facial', title: 'Hilos Tensores', badge: 'Premium', desc: 'Lifting sin cirugía con hilos de PDO y PLLA para redefinir el óvalo facial y tensar la piel con efecto inmediato.', details: 'Técnica mínimamente invasiva que utiliza hilos reabsorbibles para elevar y redefinir los tejidos faciales. Estimula la producción de colágeno propio.<br><br><strong>Tipos:</strong> PDO, PLLA, PCL<br><strong>Duración:</strong> 45-60 min<br><strong>Resultados:</strong> 12-18 meses', img: 'img/facial_hilos.png' },
+    { id: 4, category: 'facial', title: 'Mesoterapia Facial', badge: '', desc: 'Cóctel vitamínico inyectable con vitaminas, minerales y ácido hialurónico para una piel luminosa y revitalizada.', details: 'Microinyecciones de sustancias nutritivas directamente en la piel para mejorar su textura, luminosidad e hidratación profunda.<br><br><strong>Beneficios:</strong> Luminosidad, Hidratación, Anti-oxidante<br><strong>Sesiones:</strong> 4-6 sessiones recomendadas<br><strong>Duración:</strong> 20-30 min', img: 'img/facial_mesoterapia.png' },
+    { id: 5, category: 'facial', title: 'Peeling Químico', badge: '', desc: 'Exfoliación profunda controlada para renovar la piel, eliminar manchas, cicatrices de acné y mejorar la textura cutánea.', details: 'Aplicación de ácidos médicos para promover la renovación celular. Diferentes profundidades según la necesidad del paciente.<br><br><strong>Tipos:</strong> Superficial, Medio, Profundo<br><strong>Indicaciones:</strong> Manchas, Acné, Textura, Arrugas finas<br><strong>Recuperación:</strong> 2-7 días', img: 'img/facial_peeling.png' },
+    { id: 6, category: 'facial', title: 'Rejuvenecimiento IPL / Láser', badge: 'Tecnología', desc: 'Fotorejuvenecimiento mediante luz pulsada intensa o láser para tratar manchas solares, rojeces y poros dilatados.', details: 'La luz pulsada intensa y los láseres fraccionados estimulan la producción de colágeno y elastina, mejorando el tono y la textura de la piel.<br><br><strong>Indicaciones:</strong> Manchas, Rosácea, Poros, Textura<br><strong>Sesiones:</strong> 3-5 sesiones<br><strong>Duración:</strong> 30-45 min', img: 'img/facial_ipl.png' },
+    { id: 7, category: 'facial', title: 'Indiba Facial', badge: '', desc: 'Radiofrecuencia monopolar profunda para activar la producción de colágeno, mejorar la firmeza y reducir la flacidez.', details: 'Tecnología patentada de radiofrecuencia a 448 kHz que genera un efecto biológico profundo en los tejidos.<br><br><strong>Beneficios:</strong> Firmeza, Contorno, Luminosidad<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Duración:</strong> 45-60 min', img: 'img/facial_indiba.png' },
+    { id: 8, category: 'facial', title: 'Limpieza Facial Profunda', badge: '', desc: 'Higiene médica avanzada con extracción, oxigenación, hidratación y máscara LED para una piel impecable.', details: 'Protocolo completo que incluye limpieza enzimática, vaporización, extracción profesional, alta frecuencia, sérum personalizado y máscara LED.<br><br><strong>Indicaciones:</strong> Todos los tipos de piel<br><strong>Duración:</strong> 60-90 min<br><strong>Frecuencia:</strong> Mensual', img: 'img/facial_limpieza.png' },
+    { id: 9, category: 'facial', title: 'Rinomodelación', badge: 'Sin Cirugía', desc: 'Remodelación nasal sin bisturí mediante inyecciones de ácido hialurónico para corregir imperfecciones.', details: 'Corrección de dorso, punta y asimetrías nasales sin necesidad de intervención quirúrgica, con resultados inmediatos y reversibles.<br><br><strong>Duración:</strong> 15-30 min<br><strong>Resultados:</strong> 12-18 meses<br><strong>Recuperación:</strong> Inmediata', img: 'img/facial_rinomodelacion.png' },
+    { id: 10, category: 'facial', title: 'Plasma Rico en Plaquetas (Facial)', badge: 'Bio', desc: 'Tu propio plasma concentrado para regenerar la piel, mejorar la textura, la luminosidad y estimular el colágeno.', details: 'Tratamiento biológico regenerativo que utiliza las plaquetas de tu propia sangre para activar los mecanismos de reparación celular.<br><br><strong>Beneficios:</strong> Regeneración, Luminosidad, Anti-aging<br><strong>Sesiones:</strong> 3-4 sesiones anuales<br><strong>Seguridad:</strong> Biocompatible al 100%', img: 'img/facial_prp.png' },
 
     // CORPORALES
-    { id: 11, category: 'corporal', title: 'Criolipólisis', badge: 'Popular', desc: 'Eliminación selectiva de grasa localizada mediante frío controlado sin cirugía ni tiempo de inactividad.', details: 'Tecnología de enfriamiento controlado que destruye selectivamente las células grasas, que son eliminadas de forma natural por el organismo.<br><br><strong>Zonas:</strong> Abdomen, Flancos, Muslos, Papada<br><strong>Sesiones:</strong> 1-3 por zona<br><strong>Resultados:</strong> 2-3 meses', img: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop' },
-    { id: 12, category: 'corporal', title: 'Cavitación Médica', badge: '', desc: 'Ultrasonidos de baja frecuencia para fragmentar los adipocitos y reducir grasa localizada y celulitis.', details: 'Los ultrasonidos crean microburbujas que rompen las membranas de las células grasas, liberando su contenido para su eliminación natural.<br><br><strong>Indicaciones:</strong> Grasa localizada, Celulitis<br><strong>Sesiones:</strong> 8-12 sesiones<br><strong>Duración:</strong> 40-60 min', img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop' },
-    { id: 13, category: 'corporal', title: 'Mesoterapia Corporal', badge: '', desc: 'Microinyecciones de sustancias lipolíticas y reafirmantes para reducir la celulitis y mejorar la textura de la piel.', details: 'Cócteles personalizados inyectados de forma subcutánea en las zonas problemáticas para tratar la celulitis, la retención de líquidos y la flacidez.<br><br><strong>Zonas:</strong> Piernas, Glúteos, Abdomen, Brazos<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Duración:</strong> 30 min', img: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop' },
-    { id: 14, category: 'corporal', title: 'Eliminación de Varices', badge: '', desc: 'Escleroterapia y láser vascular para eliminar arañas vasculares y varices finas de forma definitiva.', details: 'Técnicas combinadas de escleroterapia (inyección de solución esclerosante) y láser vascular para eliminar los vasos sanguíneos antiestéticos.<br><br><strong>Zonas:</strong> Piernas, Tobillos, Cara<br><strong>Sesiones:</strong> 2-4 sesiones<br><strong>Recuperación:</strong> Inmediata', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop' },
+    { id: 11, category: 'corporal', title: 'Criolipólisis', badge: 'Popular', desc: 'Eliminación selectiva de grasa localizada mediante frío controlado sin cirugía ni tiempo de inactividad.', details: 'Tecnología de enfriamiento controlado que destruye selectivamente las células grasas, que son eliminadas de forma natural por el organismo.<br><br><strong>Zonas:</strong> Abdomen, Flancos, Muslos, Papada<br><strong>Sesiones:</strong> 1-3 por zona<br><strong>Resultados:</strong> 2-3 meses', img: 'img/corporal_criolipolisis.png' },
+    { id: 12, category: 'corporal', title: 'Cavitación Médica', badge: '', desc: 'Ultrasonidos de baja frecuencia para fragmentar los adipocitos y reducir grasa localizada y celulitis.', details: 'Los ultrasonidos crean microburbujas que rompen las membranas de las células grasas, liberando su contenido para su eliminación natural.<br><br><strong>Indicaciones:</strong> Grasa localizada, Celulitis<br><strong>Sesiones:</strong> 8-12 sesiones<br><strong>Duración:</strong> 40-60 min', img: 'img/corporal_cavitacion.png' },
+    { id: 13, category: 'corporal', title: 'Mesoterapia Corporal', badge: '', desc: 'Microinyecciones de sustancias lipolíticas y reafirmantes para reducir la celulitis y mejorar la textura de la piel.', details: 'Cócteles personalizados inyectados de forma subcutánea en las zonas problemáticas para tratar la celulitis, la retención de líquidos y la flacidez.<br><br><strong>Zonas:</strong> Piernas, Glúteos, Abdomen, Brazos<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Duración:</strong> 30 min', img: 'img/corporal_mesoterapia.png' },
+    { id: 14, category: 'corporal', title: 'Eliminación de Varices', badge: '', desc: 'Escleroterapia y láser vascular para eliminar arañas vasculares y varices finas de forma definitiva.', details: 'Técnicas combinadas de escleroterapia (inyección de solución esclerosante) y láser vascular para eliminar los vasos sanguíneos antiestéticos.<br><br><strong>Zonas:</strong> Piernas, Tobillos, Cara<br><strong>Sesiones:</strong> 2-4 sesiones<br><strong>Recuperación:</strong> Inmediata', img: 'img/corporal_varices.png' },
     { id: 15, category: 'corporal', title: 'Tratamiento Anticelulítico', badge: '', desc: 'Protocolo combinado con presoterapia, radiofrecuencia y drenaje linfático para combatir la celulitis eficazmente.', details: 'Enfoque multiterapéutico que combina diferentes tecnologías para atacar la celulitis en todas sus fases y mejorar la circulación.<br><br><strong>Tecnologías:</strong> Presoterapia, RF, Endermología<br><strong>Sesiones:</strong> 10-15 sesiones<br><strong>Frecuencia:</strong> 2 veces/semana', img: 'img/anticelulitico.png' },
-    { id: 16, category: 'corporal', title: 'Tratamiento Reafirmante', badge: '', desc: 'Radiofrecuencia corporal e HIFU body para tensar la piel y combatir la flacidez de abdomen, brazos y muslos.', details: 'Combinación de radiofrecuencia multipolar y ultrasonidos focalizados de alta intensidad para estimular la producción de colágeno y elastina.<br><br><strong>Zonas:</strong> Abdomen, Brazos, Muslos, Glúteos<br><strong>Sesiones:</strong> 6-8 sesiones<br><strong>Resultados:</strong> Progresivos, máximos a los 3 meses', img: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop' },
+    { id: 16, category: 'corporal', title: 'Tratamiento Reafirmante', badge: '', desc: 'Radiofrecuencia corporal e HIFU body para tensar la piel y combatir la flacidez de abdomen, brazos y muslos.', details: 'Combinación de radiofrecuencia multipolar y ultrasonidos focalizados de alta intensidad para estimular la producción de colágeno y elastina.<br><br><strong>Zonas:</strong> Abdomen, Brazos, Muslos, Glúteos<br><strong>Sesiones:</strong> 6-8 sesiones<br><strong>Resultados:</strong> Progresivos, máximos a los 3 meses', img: 'img/corporal_reafirmante.png' },
 
     // CAPILARES
-    { id: 17, category: 'capilar', title: 'Mesoterapia Capilar', badge: 'Popular', desc: 'Microinyecciones de vitaminas, minerales y factores de crecimiento en el cuero cabelludo para frenar la caída.', details: 'Tratamiento que nutre directamente los folículos pilosos con un cóctel personalizado de vitaminas, péptidos y factores de crecimiento.<br><br><strong>Indicaciones:</strong> Alopecia, Debilitamiento, Caída estacional<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Frecuencia:</strong> Semanal/Quincenal', img: 'https://images.unsplash.com/photo-1585747860019-024f3d8c6408?w=600&h=400&fit=crop' },
-    { id: 18, category: 'capilar', title: 'PRP Capilar', badge: 'Bio', desc: 'Plasma Rico en Plaquetas aplicado al cuero cabelludo para estimular la regeneración folicular y densificar el cabello.', details: 'Tu propio plasma enriquecido con plaquetas se inyecta en el cuero cabelludo para activar las células madre de los folículos pilosos.<br><br><strong>Proceso:</strong> Extracción sanguínea → Centrifugado → Aplicación<br><strong>Sesiones:</strong> 3-4 sesiones anuales<br><strong>Resultados:</strong> 3-6 meses', img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop' },
-    { id: 19, category: 'capilar', title: 'Láser Capilar de Baja Frecuencia', badge: 'Tecnología', desc: 'Estimulación del cuero cabelludo con luz láser de baja intensidad para favorecer el crecimiento y la vascularización.', details: 'La luz láser estimula la actividad celular en los folículos pilosos, mejorando la irrigación sanguínea y la absorción de nutrientes.<br><br><strong>Tecnología:</strong> LLLT (Low Level Laser Therapy)<br><strong>Sesiones:</strong> 12-20 sesiones<br><strong>Complemento:</strong> Ideal con Mesoterapia y PRP', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop' },
+    { id: 17, category: 'capilar', title: 'Mesoterapia Capilar', badge: 'Popular', desc: 'Microinyecciones de vitaminas, minerales y factores de crecimiento en el cuero cabelludo para frenar la caída.', details: 'Tratamiento que nutre directamente los folículos pilosos con un cóctel personalizado de vitaminas, péptidos y factores de crecimiento.<br><br><strong>Indicaciones:</strong> Alopecia, Debilitamiento, Caída estacional<br><strong>Sesiones:</strong> 6-10 sesiones<br><strong>Frecuencia:</strong> Semanal/Quincenal', img: 'img/capilar_mesoterapia.png' },
+    { id: 18, category: 'capilar', title: 'PRP Capilar', badge: 'Bio', desc: 'Plasma Rico en Plaquetas aplicado al cuero cabelludo para estimular la regeneración folicular y densificar el cabello.', details: 'Tu propio plasma enriquecido con plaquetas se inyecta en el cuero cabelludo para activar las células madre de los folículos pilosos.<br><br><strong>Proceso:</strong> Extracción sanguínea → Centrifugado → Aplicación<br><strong>Sesiones:</strong> 3-4 sesiones anuales<br><strong>Resultados:</strong> 3-6 meses', img: 'img/capilar_prp.png' },
+    { id: 19, category: 'capilar', title: 'Láser Capilar de Baja Frecuencia', badge: 'Tecnología', desc: 'Estimulación del cuero cabelludo con luz láser de baja intensidad para favorecer el crecimiento y la vascularización.', details: 'La luz láser estimula la actividad celular en los folículos pilosos, mejorando la irrigación sanguínea y la absorción de nutrientes.<br><br><strong>Tecnología:</strong> LLLT (Low Level Laser Therapy)<br><strong>Sesiones:</strong> 12-20 sesiones<br><strong>Complemento:</strong> Ideal con Mesoterapia y PRP', img: 'img/capilar_laser.png' },
 
     // DEPILACIÓN
-    { id: 20, category: 'depilacion', title: 'Depilación Láser Médica', badge: 'Premium', desc: 'Depilación definitiva con láser de diodo y alejandrita de última generación, supervisada por médicos especializados.', details: 'Sistema de depilación láser médica que combina la longitud de onda más eficaz para cada tipo de piel y vello, con tecnología de enfriamiento integrada.<br><br><strong>Tecnologías:</strong> Láser Diodo 808nm, Alejandrita 755nm<br><strong>Zonas:</strong> Facial y Corporal completo<br><strong>Sesiones:</strong> 6-10 sesiones', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop' },
-    { id: 21, category: 'depilacion', title: 'Láser Facial (Labio, Patillas, Mentón)', badge: '', desc: 'Depilación definitiva de vello facial con la máxima precisión y seguridad en pieles delicadas.', details: 'Tratamiento específico para el rostro con láser calibrado para las zonas más sensibles, garantizando resultados sin irritación.<br><br><strong>Zonas:</strong> Labio superior, Patillas, Mentón, Mejillas<br><strong>Sesiones:</strong> 8-12 sesiones<br><strong>Duración:</strong> 10-15 min', img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=400&fit=crop' },
+    { id: 20, category: 'depilacion', title: 'Depilación Láser Médica', badge: 'Premium', desc: 'Depilación definitiva con láser de diodo y alejandrita de última generación, supervisada por médicos especializados.', details: 'Sistema de depilación láser médica que combina la longitud de onda más eficaz para cada tipo de piel y vello, con tecnología de enfriamiento integrada.<br><br><strong>Tecnologías:</strong> Láser Diodo 808nm, Alejandrita 755nm<br><strong>Zonas:</strong> Facial y Corporal completo<br><strong>Sesiones:</strong> 6-10 sesiones', img: 'img/depilacion_laser.png' },
+    { id: 21, category: 'depilacion', title: 'Láser Facial (Labio, Patillas, Mentón)', badge: '', desc: 'Depilación definitiva de vello facial con la máxima precisión y seguridad en pieles delicadas.', details: 'Tratamiento específico para el rostro con láser calibrado para las zonas más sensibles, garantizando resultados sin irritación.<br><br><strong>Zonas:</strong> Labio superior, Patillas, Mentón, Mejillas<br><strong>Sesiones:</strong> 8-12 sesiones<br><strong>Duración:</strong> 10-15 min', img: 'img/depilacion_facial.png' },
 
     // BIENESTAR
     { id: 22, category: 'bienestar', title: 'Protocolo Antiaging Integral', badge: 'Exclusivo', desc: 'Programa personalizado combinando mesoterapia, PRP, neuromoduladores y skincare para un rejuvenecimiento global.', details: 'Un plan de tratamiento completo diseñado a medida que combina las técnicas más avanzadas de medicina estética para un rejuvenecimiento integral.<br><br><strong>Incluye:</strong> Diagnóstico IA, Plan personalizado, Seguimiento<br><strong>Duración programa:</strong> 3-6 meses<br><strong>Resultados:</strong> Rejuvenecimiento progresivo y natural', img: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=400&fit=crop' },
     { id: 23, category: 'bienestar', title: 'Protocolo Pre-Boda', badge: '', desc: 'Plan de tratamientos especial para novias: luminosidad facial, corporal, depilación y cuidados express.', details: 'Programa diseñado especialmente para que brilles en tu día más especial, comenzando idealmente 6 meses antes de la boda.<br><br><strong>Incluye:</strong> Facial intensivo, Tratamiento corporal, Depilación, Skincare<br><strong>Inicio ideal:</strong> 6 meses antes<br><strong>Personalización:</strong> 100% a medida', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop' },
-    { id: 24, category: 'bienestar', title: 'Protocolo Postparto', badge: '', desc: 'Recuperación estética tras el embarazo: flacidez abdominal, estrías, retención de líquidos y revitalización.', details: 'Programa integral para recuperar tu cuerpo después del embarazo, combinando tecnologías no invasivas para resultados seguros durante la lactancia.<br><br><strong>Incluye:</strong> Reafirmante corporal, Tratamiento de estrías, Drenaje<br><strong>Seguridad:</strong> Compatible con lactancia<br><strong>Duración:</strong> 3-4 meses', img: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop' },
-    { id: 25, category: 'bienestar', title: 'Protocolo Longevidad', badge: 'Exclusivo', desc: 'Medicina antiaging de precisión: análisis biológico, suplementación personalizada y tratamientos avanzados.', details: 'Enfoque científico multidisciplinar para ralentizar el envejecimiento biológico y optimizar la salud a largo plazo.<br><br><strong>Incluye:</strong> Analítica completa, Telómeros, Nutrigenómica, Plan personalizado<br><strong>Seguimiento:</strong> Trimestral<br><strong>Enfoque:</strong> Preventivo y regenerativo', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop' },
+    { id: 24, category: 'bienestar', title: 'Protocolo Postparto', badge: '', desc: 'Recuperación estética tras el embarazo: flacidez abdominal, estrías, retención de líquidos y revitalización.', details: 'Programa integral para recuperar tu cuerpo después del embarazo, combinando tecnologías no invasivas para resultados seguros durante la lactancia.<br><br><strong>Incluye:</strong> Reafirmante corporal, Tratamiento de estrías, Drenaje<br><strong>Seguridad:</strong> Compatible con lactancia<br><strong>Duración:</strong> 3-4 meses', img: 'img/bienestar_postparto.png' },
+    { id: 25, category: 'bienestar', title: 'Protocolo Longevidad', badge: 'Exclusivo', desc: 'Medicina antiaging de precisión: análisis biológico, suplementación personalizada y tratamientos avanzados.', details: 'Enfoque científico multidisciplinar para ralentizar el envejecimiento biológico y optimizar la salud a largo plazo.<br><br><strong>Incluye:</strong> Analítica completa, Telómeros, Nutrigenómica, Plan personalizado<br><strong>Seguimiento:</strong> Trimestral<br><strong>Enfoque:</strong> Preventivo y regenerativo', img: 'img/bienestar_longevidad.png' },
   ];
 
   // Sample before/after cases (demo data stored in localStorage)
@@ -47,75 +47,81 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'c1', filter: 'facial', treatment: 'Aumento de Labios (Ácido Hialurónico)', title: 'Resultados Naturales',
       desc: 'Aumento sutil con ácido hialurónico. Volumen natural sin perder la forma original.',
-      before: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop'
+      before: 'img/c1_before.png',
+      after: 'img/c1_after.png'
     },
     {
       id: 'c2', filter: 'facial', treatment: 'Rejuvenecimiento Facial', title: 'Armonización Facial',
       desc: 'Combinación de neuromoduladores, ácido hialurónico y mesoterapia para un rejuvenecimiento global sin cirugía.',
-      before: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=400&fit=crop'
+      before: 'img/c2_before.png',
+      after: 'img/c2_after.png'
     },
     {
       id: 'c3', filter: 'corporal', treatment: 'Criolipólisis Abdominal', title: 'Reducción de Contorno',
       desc: 'Protocolo de 3 sesiones de criolipólisis combinada con radiofrecuencia para reducción y reafirmación.',
-      before: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop'
+      before: 'img/c3_before.png',
+      after: 'img/c3_after.png'
     },
     {
       id: 'c4', filter: 'corporal', treatment: 'Tratamiento Anticelulítico', title: 'Alisado Cutáneo',
       desc: 'Combinación de presoterapia y radiofrecuencia para tratar la celulitis y mejorar la textura cutánea.',
-      before: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop'
+      before: 'img/c4_before.png',
+      after: 'img/c4_after.png'
     },
     {
       id: 'c5', filter: 'capilar', treatment: 'Mesoterapia Capilar', title: 'Recuperación de Densidad',
       desc: 'Aumento visible del grosor capilar tras un programa de microinyecciones vitamínicas y minerales.',
-      before: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop'
+      before: 'img/case5_before.png',
+      after: 'img/case5_after.png'
     },
     {
       id: 'c6', filter: 'capilar', treatment: 'PRP Capilar', title: 'Regeneración Folicular',
       desc: 'Estimulación progresiva del folículo mediante plasma rico en plaquetas para frenar la caída.',
-      before: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1585747860019-024f3d8c6408?w=600&h=400&fit=crop'
+      before: 'img/case6_before.png',
+      after: 'img/case6_after.png'
     },
     {
       id: 'c7', filter: 'depilacion', treatment: 'Depilación Láser Médica', title: 'Piel Suave Definitiva',
       desc: 'Eliminación del vello corporal con láser de diodo de última generación. Resultados tras 5 sesiones.',
-      before: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&h=400&fit=crop'
+      before: 'img/c7_before.png',
+      after: 'img/c7_after.png'
     },
     {
-      id: 'c8', filter: 'depilacion', treatment: 'Láser Facial', title: 'Rostro Impecable',
+      id: 'c11', filter: 'depilacion', treatment: 'Depilación Láser de Axilas', title: 'Axilas Suaves',
+      desc: 'Eliminación permanente del vello en axilas. Piel suave, libre de vello e irritaciones tras 6 sesiones.',
+      before: 'img/c11_before.png',
+      after: 'img/c11_after.png'
+    },
+    {
+      id: 'c8', filter: 'facial', treatment: 'Láser Facial', title: 'Rostro Impecable',
       desc: 'Depilación definitiva de zonas sensibles (labio superior y mentón) sin irritación.',
-      before: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=400&fit=crop'
+      before: 'img/c8_before.png',
+      after: 'img/c8_after.png'
     },
     {
       id: 'c9', filter: 'bienestar', treatment: 'Protocolo Antiaging Integral', title: 'Rejuvenecimiento Global',
       desc: 'Mejora radical del tono y textura gracias a un programa combinado de mesoterapia y cuidados de la piel.',
-      before: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=400&fit=crop'
+      before: 'img/c9_before.png',
+      after: 'img/c9_after.png'
     },
     {
       id: 'c10', filter: 'bienestar', treatment: 'Protocolo Pre-Boda', title: 'Luminosidad Inmediata',
       desc: 'Preparación facial y corporal intensiva para deslumbrar en tu gran día.',
-      before: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop',
-      after: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=400&fit=crop'
+      before: 'img/c10_before.png',
+      after: 'img/c10_after.png'
     }
   ];
 
   // ─── STORAGE HELPERS ──────────────────────────
   function getCases() {
-    const stored = localStorage.getItem('eclat_cases_v5');
+    const stored = localStorage.getItem('eclat_cases_v20');
     if (stored) return JSON.parse(stored);
-    localStorage.setItem('eclat_cases_v5', JSON.stringify(DEFAULT_CASES));
+    localStorage.setItem('eclat_cases_v20', JSON.stringify(DEFAULT_CASES));
     return DEFAULT_CASES;
   }
 
   function saveCases(cases) {
-    localStorage.setItem('eclat_cases_v5', JSON.stringify(cases));
+    localStorage.setItem('eclat_cases_v20', JSON.stringify(cases));
   }
 
   // ─── HEADER SCROLL ───────────────────────────
@@ -282,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  renderCases('random');
+  renderCases('facial');
 
   // ─── BEFORE/AFTER SLIDER LOGIC ───────────────
   function initSliders() {
@@ -297,6 +303,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const handle = slider.querySelector('.case-slider__handle');
         beforeEl.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
         handle.style.left = pos + '%';
+
+        // Ocultar etiquetas si el manejador está muy cerca de los bordes para evitar solapamientos
+        const beforeLabel = slider.querySelector('.case-slider__label--before');
+        const afterLabel = slider.querySelector('.case-slider__label--after');
+        if (beforeLabel) beforeLabel.style.opacity = pos < 25 ? '0' : '1';
+        if (afterLabel) afterLabel.style.opacity = pos > 75 ? '0' : '1';
       }
 
       slider.style.cursor = 'grab';
